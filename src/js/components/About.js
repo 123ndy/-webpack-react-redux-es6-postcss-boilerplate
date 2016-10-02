@@ -1,4 +1,4 @@
-require('./styles/styles.css')
+require('../../styles/styles.css')
 
 import React from 'react'
 

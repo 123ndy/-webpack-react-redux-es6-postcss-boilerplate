@@ -7,7 +7,7 @@ var autoprefixer = require('autoprefixer') //required by postcss
 var styleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'App.js'),
+  entry: path.join(__dirname, 'src/js', 'App.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -21,7 +21,7 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           presets: ['es2015', 'react', 'react-hmre'],
-          plugins: ['transform-runtime']
+          plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-object-rest-spread']
         }
       },
       {
